@@ -70,6 +70,54 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   border: 2px solid #E91E63;
 }
 
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
 </style>
 
 
@@ -159,14 +207,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           T. Winterbottom*, N. Al Moubayed, S. Xiao, A. McLean<br>
           (BMVC 2020)<br>
           <button class="button button1" onclick="location.href='https://github.com/Jumperkables/tvqa_modality_bias'">Code</button><button class="button button1">Paper</button><button class="button button1">BibTex</button>
-            <!--<div id="id01" class="w3-modal">
-                <div class="w3-modal-content">
-                    <div class="w3-container">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <p>Upcoming after BMVC Publication</p>
-                    </div>
-                </div>
-                </div>-->
           <p>Carefully consider modality bias in datasets.</p>
           <hr>
         </div>
@@ -191,6 +231,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   
   <!-- End Page Container -->
 </div>
+
+
+
+
+
+
 
 <footer class="w3-container w3-dark-grey w3-center w3-margin-top">
   <p class-"w3-text-pink">Stay at 4 stacks of Arcane Blast.</p>
