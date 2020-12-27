@@ -212,7 +212,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", serif}
         <div class="w3-container">
           <h6 class="w3-text-pink" style="font-size:20px"><b>Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models</b></h6><h6 class="w3-text-lighty-grey" style="font-size:20px"><b>(ICANN 2020)</b></h6>
           A. Gajbhiye*, T. Winterbottom, N. Al Moubayed, S. Bradley<br>
-          <button class="button button1" onclick="location.href='https://example.com'">Code</button><button class="button button1" onclick="location.href='https://arxiv.org/abs/2010.11562'">Paper</button><button class="button button1" onclick="document.getElementById('bib_nli').style.display='block'">BibTex</button>
+          <button class="button button1" onclick="document.getElementById('code_nli').style.display='block'">Code</button><button class="button button1" onclick="location.href='https://arxiv.org/abs/2010.11562'">Paper</button><button class="button button1" onclick="document.getElementById('bib_nli').style.display='block'">BibTex</button>
           <p>BLP in NLI.</p>
         </div>
 
@@ -281,17 +281,32 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", serif}
       </header>
       <div class="w3-container w3-black">
         <p>@article{Gajbhiye_2020,
-   title={Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models},
-   ISBN={9783030616090},
-   ISSN={1611-3349},
-   url={http://dx.doi.org/10.1007/978-3-030-61609-0_50},
-   DOI={10.1007/978-3-030-61609-0_50},
-   journal={Lecture Notes in Computer Science},
-   publisher={Springer International Publishing},
-   author={Gajbhiye, Amit and Winterbottom, Thomas and Al Moubayed, Noura and Bradley, Steven},
-   year={2020},
-   pages={633–646}
-}</p>
+               title={Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models},
+               ISBN={9783030616090},
+               ISSN={1611-3349},
+               url={http://dx.doi.org/10.1007/978-3-030-61609-0_50},
+               DOI={10.1007/978-3-030-61609-0_50},
+               journal={Lecture Notes in Computer Science},
+               publisher={Springer International Publishing},
+               author={Gajbhiye, Amit and Winterbottom, Thomas and Al Moubayed, Noura and Bradley, Steven},
+               year={2020},
+               pages={633–646}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="code_nli" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-pink"> 
+        <span onclick="document.getElementById('bib_nli').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>BibTex</h2>
+      </header>
+      <div class="w3-container w3-black">
+        <p>
+        Ask the very kind first author for the code: 'https://scholar.google.co.uk/citations?user=yEzfwXcAAAAJ'
+        </p>
       </div>
     </div>
   </div>
