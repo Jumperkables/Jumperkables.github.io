@@ -1,203 +1,533 @@
+
 <!DOCTYPE html>
-<html>
-<title>Dr Tom Winterbottom</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style type="text/css">
-/*@font-face {
-    font-family: "Computer Modern";
-    src: url('https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf');
-    font-weight: bold;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf');
-    font-style: italic, oblique;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('https://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf');
-    font-weight: bold;
-    font-style: italic, oblique;
-  }
-
-  body {
-    font-family: "Computer Modern", sans-serif;
-  }
-  */
-
-
-
-
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", serif}
-/*Roboto*/
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="imgs/mugshot.png" alt="Tomos" class="profile-pic">
+        </div>
+        <h1>Dr. Thomas Jumperkables Winterbottom</h1>
+    </header>
 
 
 
 
 
 
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 8px 14px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 4px 2px;
-  transition-duration: 0.2s;
-  cursor: pointer;
+
+
+
+
+
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="about-column lifestyle">
+            <h2>TL;DR Personal</h2>
+            <ul>
+                <li>I like to lift</li>
+                <li>I like to make things and DIY</li>
+                <li>Will 500% celebrate and encourage all the cool things you do</li>
+                <li>Will probably send you memes if I think you're cool</li>
+                <li>Good listener, will probably like you more if you're open to talking about your life (or if you're hilarious)</li>
+                <li>Don't really game much nowdays, competitive pokemon draft leagues are fun tho</li>
+                <li>Synthewave, LoFi, and Electro (80s for karaoke tho)</li>
+                <li>Power lines in nature is an awesome aesthetic (wooded kingdoms in mario odyssey)</li>
+                <li>Zombie and pandemic movie apologist</li>
+                <li>Fascinated by enviromental dystopias a bit more than one should be</li>
+                <li>Massive computer apologist. Screens are only bad if you let them control you. Go exercise, eat well, travel with friends, then come home and code</li>
+                <li>Being just a lil bit unprofessional can go a long way</li>
+            </ul>
+        </div>
+        <div class="about-column researcher">
+            <h2>TL;DR Research and Professional</h2>
+            <ul>
+                <li>My strongest ML areas are: <strong>multimodality</strong>, <strong>bias/shortcuts</strong>, and <strong>dataset curation</strong></li>
+                <li>Good ML researchers should always be thinking 'will this be applicable to the data and models of tomorrow'
+                <li>I really really like coding and I feel lucky that I do</li>
+                <li>Reading and fundamentals are important, you should rarely be too busy for them</li>
+                <li>Actually enjoy brief work small-talk and I genuinely care how your life is going. Work isn't family, but community is king</li>
+                <li>Will happily help you when I can</li>
+                <li>Will readily get my hands dirty doing data engineering, ML researchers shouldn't think they're above cleaning and labelling data. GIGO</li>
+                <li>Am humble and secure enough to admit when I don't know things, and I don't hide problems</li>
+                <li>For smaller scale ML (not LLMs), the problem is almost always data bias and shortcuts</li>
+                <li>I actually quite enjoy writing papers and reports</li>
+                <li>Open source projects and hobbyists seem to solve problems fastest and make better software</li>
+            </ul>
+        </div>
+        <div style="clear: both;"></div> <!-- Clear float -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Relevant Socials -->
+    <section class="social-links">
+        <h2>Socials</h2>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@jumperkables9372" target="_blank">
+                <img src="imgs/logos/youtube.png" alt="YouTube" class="social-icon">
+            </a>
+            <a href="https://www.twitter.com/Jumperkables" target="_blank">
+                <img src="imgs/logos/twitter.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.github.com/Jumperkables" target="_blank">
+                <img src="imgs/logos/github.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/tom-winterbottom-50b459217/" target="_blank">
+                <img src="imgs/logos/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Publications Section with Tabbing -->
+    <section class="publications">
+        <h2>Research, Employment, and Education</h2>
+        <div class="tabs">
+            <button class="tab-link" onclick="openTab(event, 'firstauthor')">First Author</button>
+            <button class="tab-link" onclick="openTab(event, 'secondauthor')">Second Author</button>
+            <button class="tab-link" onclick="openTab(event, 'theses')">Theses</button>
+            <button class="tab-link" onclick="openTab(event, 'employment')">Employment</button>
+            <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+        </div>
+        <div id="firstauthor" class="tab-content">
+
+            <!-- Abstract Concrete -->
+            <div class="publication">
+                <h3>Neurolinguistic Word Norms and Measures of Similarity in Deep Learning</h3>
+                <h4>(Pending)</h4>
+                <p><strong>Authors:</strong> Thomas Winterbottom, Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://github.com/Jumperkables/a_vs_c" target="_blank" class="btn">Code</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(22)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-22">
+                    <pre>
+The final project of my PhD thesis continued. I found interesting results using neurolinguistic scores of similarity in a VQA classification context. However, an expanded study considering the effects of word norms in LLM benchmarks of today is currently in the works. Aiming to have a version on arXiv before the 2025.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Clean Air -->
+            <div class="publication">
+                <h3>5MAP: Clean Air Multimodal Air Pollution Data Alignment</h3>
+                <h4>(Pending)</h4>
+                <p><strong>Authors:</strong> Thomas Winterbottom, Manik Gupta, Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://github.com/Jumperkables/clean_air" target="_blank" class="btn">Code</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(21)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-21">
+                    <pre>
+A project from 2024 that is ongoing in my spare time. I have aligned a very large dataset of air pollution data using WAQI as a base, but crucially aligned (as best i can) with weather data, surrounding landuse statistics , OpenStreetMap data, and elevation. I will be looking to publish a paper on my work here in the coming months. arXiv preprint will be ready soon.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Visual Modelling -->
+            <div class="publication">
+                <h3>The Power of Next-Frame Prediction for Learning Physical Laws</h3>
+                <h4>(arXiv 2024)</h4>
+                <p><strong>Authors:</strong> Thomas Winterbottom, G. Thomas Hudson, Daniel Kluvanec, Dean Slack, Jamie Sterling, Junjie Shentu, Chenghao Xiao, Zheming Zuo, Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://arxiv.org/abs/2405.17450" target="_blank" class="btn">arXiv</a>
+                    <a href="https://github.com/Visual-modelling" target="_blank" class="btn">Code</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(0)">View BibTeX</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(12)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-0">
+                    <pre>
+@misc{winterbottom2024powernextframepredictionlearning,
+    title={The Power of Next-Frame Prediction for Learning Physical Laws}, 
+    author={Thomas Winterbottom and G. Thomas Hudson and Daniel Kluvanec and Dean Slack and Jamie Sterling and Junjie Shentu and Chenghao Xiao and Zheming Zuo and Noura Al Moubayed},
+    year={2024},
+    eprint={2405.17450},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2405.17450}, 
+}
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-12">
+                    <pre>
+A project from early 2020 that was ongoing in various forms. The original inspiration was essentially "languauge modelling for vision" which was more novel back in 2020. But the project grew to become more of an analytic exploration of what we can quantifiably and qualitatively show that next frame prediction induces. I led the experiments and writing for this paper's work, but there are several works spawning from the original led by my co-authors in the works for the near future.
+                    </pre>
+                </div>
+            </div>
+
+
+            <!-- Archaeology -->
+            <div class="publication">
+                <h3>A Deep Learning Approach to Fight Illicit Trafficking of Antiquities Using Artefact Instance Classification</h3>
+                <h4>(Nature Scientific Reports 2022)</h4>
+                <p><strong>Authors:</strong> Thomas Winterbottom, Anna Leone, Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://www.nature.com/articles/s41598-022-15965-2" target="_blank" class="btn">Peer Reviewed Publication</a>
+                    <a href="https://github.com/Durham-University-VIVID-Noura-s-Lab/artefact_instance_cls" target="_blank" class="btn">Code</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(1)">View BibTeX</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(2)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-1">
+                    <pre>
+@article{Winterbottom2022ADL,
+    title={A deep learning approach to fight illicit trafficking of antiquities using artefact instance classification},
+    author={Thomas Winterbottom and Anna Leone and Noura Al Moubayed},
+    journal={Scientific Reports},
+    year={2022},
+    volume={12}
+}
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-2">
+                    <pre>
+A project from 2022 from a smaller part time postdoc position. The work represents the beginnings of a proof of concept for using CNNs for doing arefact detection. The results were pretty good, with an increased dataset size allowing me to expand the scope of the classification setup I think there are promising implications here.
+                    </pre>
+                </div>
+            </div>
+
+
+
+
+            <!-- Bilinear Pooling -->
+            <div class="publication">
+                <h3>Bilinear Pooling in Video-QA: Empirical Challenges and Motivational Drift from Neurological Parallels</h3>
+                <h4>(PeerJ 2022)</h4>
+                <p><strong>Authors:</strong>Thomas Winterbottom, Sarah Xiao, Alistair McLean, Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://peerj.com/articles/cs-974/" target="_blank" class="btn">Peer Reviewed Publication</a>
+                    <a href="https://arxiv.org/abs/2012.10285" target="_blank" class="btn">arXiv</a>
+                    <a href="https://github.com/Jumperkables/trying_blp" target="_blank" class="btn">Code</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(3)">View BibTeX</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(4)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-3">
+                    <pre>
+@inproceedings{mbintvqa,
+    title={Bilinear pooling in video-QA: empirical challenges and motivational drift from neurological parallels},
+    author={Winterbottom, T. and Xiao, S. and McLean, A. and Al Moubayed, N.},
+    booktitle={PeerJ},
+    year={2022}
+}
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-4">
+                    <pre>
+My second publication during my PhD. Quite a long one, this broadly has two cores to it. I wanted to take a critical look at bilinear pooling, a method for performing feature fusion in neural networks particularly popular in the nascent multimodal ML field of 2020. Authors were iterating on various methods of bilinear pooling with clever maths to bring the memory cost down and performance up, which is invaluable research. However, I noticed interestingly that some of the parallels to certain neurological theories that some of the earlier bilinear techniques had were fading, and the justification of these news techniques is mostly just improved performance. I wanted to be careful to keep my core message of "please don't overstate results", and "hey there are interesting parallels to some neuroscience here", without drifting too far into non-ML areas I didn't have grounding in. I'm happy with this paper, but wanted to focus more on implementation for the next few things.
+                    </pre>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- On Modality Bias in TVQA -->
+            <div class="publication">
+                <h3>On Modality Bias in the TVQA Dataset</h3>
+                <h4>(BMVC 2020)</h4>
+                <p><strong>Authors:</strong>Thomas Winterbottom, Sarah Xiao, Alistair McLean, Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://www.bmvc2020-conference.com/assets/papers/0476.pdf" target="_blank" class="btn">Peer Reviewed Publication</a>
+                    <a href="https://www.arxiv.org/abs/2012.10210" target="_blank" class="btn">arXiv</a>
+                    <a href="https://github.com/Jumperkables/tvqa_modality_bias" target="_blank" class="btn">Code</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(5)">View BibTeX</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(6)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-5">
+                    <pre>
+@inproceedings{mbintvqa,
+    title={On Modality Bias in the TVQA Dataset},
+    author={Winterbottom, T. and Xiao, S. and McLean, A. and Al Moubayed, N.},
+    booktitle={Proceedings of the British Machine Vision Conference ({BMVC})},
+    year={2020}
+}
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-6">
+                    <pre>
+An analysis and quantification of text shortcuts in TVQA, a large and impressive video-QA dataset from around 2019. Broadly, I wanted to emphasise care should be taken in using such shortcuts. Can one say a reliance on these shortcuts is indeed multimodal? I show that the then-state-of-the-art model actually supressed the vision inputs when they were trained together. I also outlined an inclusion-exclusion method of sorts to try and isolate subsets of a given dataset that can be answered with various modality combinations. My first ever publication, during my PhD, and my work quality has naturally improved. I hope readers understand that TVQA is still indeed a very good and valuable dataset. :)
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div id="secondauthor" class="tab-content">
+            <!-- Amits Bilinear Paper -->
+            <div class="publication">
+                <h3>Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models</h3>
+                <h4>(ICANN 2020)</h4>
+                <p><strong>Authors:</strong> Amit Gajbhiye, Thomas Winterbottom, Noura Al Moubayed, Steven Bradley</p>
+                <div class="buttons">
+                    <a href="https://arxiv.org/abs/2010.11562" target="_blank" class="btn">Peer Reviewed Publication</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(7)">Code</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(8)">View BibTeX</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(9)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-7">
+                    <pre>
+Ask the very kind first author for the code.
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-8">
+                    <pre>
+@article{Gajbhiye_2020,
+    title={Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models},
+    ISBN={9783030616090},
+    ISSN={1611-3349},
+    url={http://dx.doi.org/10.1007/978-3-030-61609-0_50},
+    DOI={10.1007/978-3-030-61609-0_50},
+    journal={Lecture Notes in Computer Science},
+    publisher={Springer International Publishing},
+    author={Gajbhiye, Amit and Winterbottom, Thomas and Al Moubayed, Noura and Bradley, Steven},
+    year={2020},
+    pages={633–646}
+}
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-9">
+                    <pre>
+I helped Amit integrate bilinear pooling into his model. Funtimes, he's a great guy.
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div id="theses" class="tab-content">
+            <div class="publication">
+                <h3>PhD Thesis</h3>
+                <h4>(Durham University 2023)</h4>
+                <p><strong>Author:</strong> Thomas Winterbottom</p>
+                <p><strong>Supervisor:</strong> Noura Al Moubayed</p>
+                <div class="buttons">
+                    <a href="https://etheses.dur.ac.uk/14891/" target="_blank" class="btn">Published Thesis</a>
+                    <button class="btn bibtex-btn" onclick="showBibtex(10)">View BibTeX</button>
+                    <button class="btn bibtex-btn" onclick="showBibtex(11)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-10">
+                    <pre>
+@phdthesis{winterbottom2023,
+  author       = {Thomas Winterbottom},
+  title        = {Scalable Methodologies and Analyses for Modality Bias and Feature Exploitation in Language-Vision Multimodal Deep Learning},
+  school       = {Durham University},
+  year         = {2023},
+  type         = {PhD thesis},
+  note         = {Unpublished, successfully defended},
+  url          = {https://etheses.dur.ac.uk/14891/},
 }
 
-.button1 {
-  background-color: #000000; 
-  color: #E91E63; 
-  border: 2px solid #E91E63;
-}
-
-.button1:hover {
-  background-color: #E91E63;
-  color: #000000;
-  border: 2px solid #E91E63;
-}
-
-
-
-
-
-
-
-
-
-</style>
-
-
-
-
-
-
-
-<body class="w3-black">
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-black w3-text-light-grey w3-card-4">
-        <div class="w3-display-container w3-center">
-            <h2 class="w3-text-light-grey w3-padding-16 w3-center" ><b>Dr Tom Winterbottom</b></h2>
-          <img src="imgs/grey_correction.png" style="width:39%" alt="Avatar", border="4">
-          <p class="w3-center"><i>"Fun isn't something one considers when building a website. But, this does put a smile on my face."</i></p>
-        </div>
-        <div class="w3-container">
-            <!--<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-pink"></i>Durham, United Kingdom</p>-->
-          <p><i class="fa fa-desktop fa-fw w3-margin-right w3-large w3-text-pink"></i><a href="https://github.com/Jumperkables">GitHub</a></p>
-          <p><i class="fa fa-twitter fa-fw w3-margin-right w3-large w3-text-pink"></i>@Jumperkables</p>
-          <!--<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-pink"></i>1224435534</p>-->
-
-          <hr>
-
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-cogs fa-fw w3-margin-right w3-text-pink"></i>Projects</b></p>
-          <!--<p>EEG Headset</p>
-          <div class="w3-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-pink" style="height:24px;width:20%"></div>
-          </div>-->
-
-          <hr>
-
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-book fa-fw w3-margin-right w3-text-pink"></i>Interests</b></p>
-          <!--<h6 class="w3-text-pink" style="font-size:18px"><b>Coding:</b></h6>
-          <p, style="text-align:justify; text-justify:inner-word;">Knowing the language of computers is unspeakably awesome. If you spend all day behind one you should definitely understand it</p>
-
-          <h6 class="w3-text-pink" style="font-size:18px"><b>Networks and Systems:</b></h6>
-          <p, style="text-align:justify; text-justify:inner-word;">Under-appreciated and important. Set up your own slurm server and customise your own windows manager</p>
-
-          <h6 class="w3-text-pink" style="font-size:18px"><b>Maths:</b></h6>
-          <p, style="text-align:justify; text-justify:inner-word;">The most creative subject in existence. Dont let any 'right brained' psuedoscientist tell you otherwise.</p>
-
-          <h6 class="w3-text-pink" style="font-size:18px"><b>Neuroscience:</b></h6>
-          <p, style="text-align:justify; text-justify:inner-word;">Good fun</p>
-
-          <h6 class="w3-text-pink" style="font-size:18px"><b>Climate Change</b></h6>
-          <p, style="text-align:justify; text-justify:inner-word;"><a href="https://www.youtube.com/watch?v=HTAzb7UbJ6M">This</a> might be a good place to start. <a href="https://www.youtube.com/watch?v=RWo65Uhekjs">In defence of Greta Thunberg</a></p>-->
-          <br>
-        </div>
-      </div><br>
-
-    <!-- End Left Column -->
-    </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-black w3-margin-bottom">
-        <div class="w3-container">
-          <p>Interested in Multimodal Machine Learning. Neuroscience and Psychology can give us insights that could help us. Being a little unprofessional can go a long way</p>
-          <hr>
-
-      <div class="w3-container w3-card w3-black">
-        <h2 class="w3-text-light-grey w3-padding-16"><i class="fa fa-cogs fa-fw w3-margin-right w3-xxlarge w3-text-pink"></i>Publications</h2>
-
-        <div class="w3-container">
-          <h6 class="w3-text-pink" style="font-size:20px"><b>A Deep Learning Approach to Fight Illicit Trafficking of Antiquities Using Artefact Instance Classification</b></h6><h6 class="w3-text-light-grey" style="font-size:20px"><b>(Nature Scientific Reports 2022)</b></h6>
-          T. Winterbottom*, A. Leone, N. Al Moubayed<br>
-          <button class="button button1" onclick="location.href='https://github.com/Durham-University-VIVID-Noura-s-Lab/artefact_instance_cls'">Code</button><button class="button button1" onclick="location.href='https://www.nature.com/articles/s41598-022-15965-2'">Paper</button><button class="button button1" onclick="document.getElementById('bib_archae_inst_cls').style.display='block'">BibTex</button>
-          <p>A deep learning approach to fighting illicit trafficking of antiquities.</p>
-          <hr>
-        </div>
-
-        <div class="w3-container">
-          <h6 class="w3-text-pink" style="font-size:20px"><b>Bilinear Pooling in Video-QA: Empirical Challenges and Motivational Drift from Neurological Parallels</b></h6><h6 class="w3-text-light-grey" style="font-size:20px"><b>(PeerJ 2022)</b></h6>
-          T. Winterbottom*, S. Xiao, A. McLean, N. Al Moubayed<br>
-          <button class="button button1" onclick="location.href='https://github.com/Jumperkables/trying_blp'">Code</button><button class="button button1" onclick="location.href='https://peerj.com/articles/cs-974/'">Paper</button><button class="button button1" onclick="location.href='https://arxiv.org/abs/2012.10285'">arXiv preprint</button><button class="button button1" onclick="document.getElementById('bib_tryblp').style.display='block'">BibTex</button>
-          <p>A consideration of Bilinear Pooling in video-QA benchmarks.</p>
-          <hr>
+                    </pre>
+                </div>
+                <div class="bibtex" id="bibtex-11">
+                    <pre>
+Hard to TL;DR an entire PhD. It has 4 contribution chapters. 2 positive results, 2 negative results (but the negative results are IMO sufficiently explored). Was a fantastic time. Basically, its important to me that machine learning research try to keep an eye to being applicable to future dataset and model designs.
+                    </pre>
+                </div>
+            </div>
         </div>
 
 
-        <div class="w3-container">
-          <h6 class="w3-text-pink" style="font-size:20px"><b>On Modality Bias in the TVQA Dataset</b></h6><h6 class="w3-text-light-grey" style="font-size:20px"><b>(BMVC 2020)</b></h6>
-          T. Winterbottom*, S. Xiao, A. McLean, N. Al Moubayed<br>
-          <button class="button button1" onclick="location.href='https://github.com/Jumperkables/tvqa_modality_bias'">Code</button><button class="button button1" onclick="location.href='https://arxiv.org/abs/2012.10210'">Paper</button><button class="button button1" onclick="document.getElementById('bib_tvqa').style.display='block'">BibTex</button><button class="button button1" onclick="location.href='https://youtu.be/1E2xwlcHjUk'">Video</button>
-          <p>Carefully consider modality bias in datasets.</p>
-          <hr>
+
+        <!-- Employment -->
+        <div id="employment" class="tab-content">
+
+            <!-- Evergreen Life -->
+            <div class="publication">
+                <h3>Postdoctoral KTP - Durham University and Evergreen Life</h3>
+                <h4>(May 2023 - November 2024)</h4>
+                <p><strong>Supervisor:</strong> Hubert Shum (Academic), Noura Al Moubayed (Industry)</p>
+                <p><strong>Project:</strong> Multimodal Machine Learning for Skin Cancer Classification</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(13)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-13">
+                    <pre>
+Worked on the cutting edge of skin cancer ML with a large multimodal dataset of skin cancer conditions and diagnoses, integrating text into the image classification task, and controlling for various shortcuts and biases.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Clean Air -->
+            <div class="publication">
+                <h3>Research Associate - Durham University</h3>
+                <h4>(February 2023 - April 2023)</h4>
+                <p><strong>Supervisor:</strong> Noura Al Moubayed</p>
+                <p><strong>Project:</strong> Clean Air Project</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(14)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-14">
+                    <pre>
+A short term position where I worked on air pollution data in machine learning. To date, this has culminated in me aligning a very large dataset of air pollution data using WAQI as a base, but crucially aligned (as best i can) with weather data, surrounding landuse statistics , OpenStreetMap data, and elevation. Aligning these data sources has its problems, but I'm proud of the dataset, and once I generate reliable results for a baseline, I will be looking to publish a paper on my work here. This work is ongoing in my spare time.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Evergreen Internship -->
+            <div class="publication">
+                <h3>Machine Learning Research Intern - Evergreen Life</h3>
+                <h4>(November 2022 - February 2023)</h4>
+                <p><strong>Supervisor:</strong> Noura Al Moubayed</p>
+                <p><strong>Project:</strong> Multimodal Derm AI Proof of Concept</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(15)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-15">
+                    <pre>
+A short time but full time internship where I worked on a proof of concept for a multimodal classifier for skin conditions. The proof of concept yielded promising initial results, that were later expanded upon during my KTP in 2024.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Archaeology PDRA -->
+            <div class="publication">
+                <h3>PDRA - Durham University</h3>
+                <h4>(December 2021 - April 2022)</h4>
+                <p><strong>Supervisor:</strong> Noura Al Moubayed, Anna Leone</p>
+                <p><strong>Project:</strong> Archaeological Artefact Classification for Combatting Illicit Trafficking of Cultural Heritage</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(16)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-16">
+                    <pre>
+This one is quite self explanatory. I worked on a proof-of-concept using CNNs for detecting known artefacts using Durham's Oriental Museum data. The results were high for for a proof on concept, and it was nice to get an early look into PDRA life during the end of my PhD. I got a Nature's Scientific Reports paper out of it too.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Demonstration -->
+            <div class="publication">
+                <h3>Demonstrator - Durham University</h3>
+                <h4>(October 2018 - April 2023) (Seasonal Work)</h4>
+                <p><strong>Modules:</strong> Computer Systems, Computational Thinking (Python)</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(17)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-17">
+                    <pre>
+A bit of demonstration as a PhD as is relatively standard at Durham. I demonstrated for computer systems, and learning python. Demonstration is really good fun and I found myself giving a lot to it, and had a lot of explicit feedback from students that I helped them a lot.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Caspian -->
+            <div class="publication">
+                <h3>Junior Data Scientist - Caspian Learning</h3>
+                <h4>(July 2018 - September 2023)</h4>
+                <p><strong>Supervisor:</strong> Bashar Al Hassan</p>
+                <p><strong>Project:</strong> Sentiment Analysis and Topic Modelling</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(18)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-18">
+                    <pre>
+A summer internship after my ungraduate but before my PhD where I focused on topic modelling. It was an interesting time, and the SMTM technique was relatively novel, giving me an early taste of independent research.
+                    </pre>
+                </div>
+            </div>
+
+            <h2>Non-Research Work</h2>
+
+            <!-- Labourer -->
+            <div class="publication">
+                <h3>Labourer - Whites Contractors</h3>
+                <h4>(2011 - 2017 (Summer Work))</h4>
+                <p><strong>Boss:</strong> Stuart White</p>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(19)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-19">
+                    <pre>
+I spent a good amount of seasonal and summer time working as a labourer with my step dad. Lots of painting, prep work, concreting, digging, grouting, and a touch of brick work and carpentry. Great work I feel very lucky to have experienced, and has fuelled my DIY instincts.
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Longleat -->
+            <div class="publication">
+                <h3>Food & Beverage - Longleat</h3>
+                <h4>(2015 - 2016 (Seasonal Work))</h4>
+                <div class="buttons">
+                    <button class="btn bibtex-btn" onclick="showBibtex(20)">TL;DR</button>
+                </div>
+                <div class="bibtex" id="bibtex-20">
+                    <pre>
+Fast food, restaurant, cafe, and pot wash experience all rolled into one. Genuinely was a lovely place to work. 
+                    </pre>
+                </div>
+            </div>
+
+
         </div>
 
 
-        <div class="w3-container">
-          <h6 class="w3-text-pink" style="font-size:20px"><b>Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models</b></h6><h6 class="w3-text-lighty-grey" style="font-size:20px"><b>(ICANN 2020)</b></h6>
-          A. Gajbhiye*, T. Winterbottom, N. Al Moubayed, S. Bradley<br>
-          <button class="button button1" onclick="document.getElementById('code_nli').style.display='block'">Code</button><button class="button button1" onclick="location.href='https://arxiv.org/abs/2010.11562'">Paper</button><button class="button button1" onclick="document.getElementById('bib_nli').style.display='block'">BibTex</button>
-          <p>BLP in NLI.</p>
+
+
+
+
+
+
+
+
+
+        <!-- Education -->
+        <div id="education" class="tab-content">
+            <div class="publication">
+                <h3>PhD in Multimodal Machine Learning - Durham University</h3>
+                <h4>(October 2018 - October 2022)</h4>
+                <p><strong>Supervisor:</strong> Noura Al Moubayed</p>
+                <p>Pass with minor corrections</p>
+            </div>
+
+            <div class="publication">
+                <h3>Integrated Masters in Natural Sciences - Durham University</h3>
+                <h4>(October 2014 - July 2018)</h4>
+                <h4>Maths and Computer Science Modules</h4>
+                <p>2.1, 76% in Final Year Research Project</p>
+            </div>
+
         </div>
 
 
-      </div>
-    <!-- End Right Column -->
-    </div>
-  <!-- End Grid -->
-  </div>
-  <div>
-    <!--Contact Form-->
-    
-  </div>
-  <!-- End Page Container -->
-</div>
 
 
 
@@ -205,96 +535,233 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", serif}
 
 
 
-<footer class="w3-container w3-black w3-center w3-margin-top">
-  <p class-"w3-text-pink">I'm sure i'll think of something good to put here.</p>
-  <p class="w3-text-pink">Based on and powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
 
 
-<!--Modals-->
-<!--A Deep Learning Approach to Fight Illicit Trafficking of Antiquities using Artefact Instance Classification-->
-  <div id="bib_archae_inst_cls" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-pink"> 
-        <span onclick="document.getElementById('bib_archae_inst_cls').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>BibTex</h2>
-      </header>
-      <div class="w3-container w3-black">
-          <p>@article{Winterbottom2022ADL,<br>   title={A deep learning approach to fight illicit trafficking of antiquities using artefact instance classification},<br>   author={Thomas Winterbottom and Anna Leone and Noura Al Moubayed},<br>   journal={Scientific Reports},<br>   year={2022},<br>   volume={12}<br>}</p>
-      </div>
-    </div>
-  </div>
-
-<!--Bilinear pooling in video-QA: empirical challenges and motivational drift from neurological parallels-->
-  <div id="bib_tryblp" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-pink"> 
-        <span onclick="document.getElementById('bib_tryblp').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>BibTex</h2>
-      </header>
-      <div class="w3-container w3-black">
-        <p>@inproceedings{mbintvqa, <br>title={Bilinear pooling in video-QA: empirical challenges and motivational drift from neurological parallels}, <br>author={Winterbottom, T. and Xiao, S. and McLean, A. and Al Moubayed, N.}, <br>booktitle={PeerJ}, <br>year={2022}}</p>
-      </div>
-    </div>
-  </div>
-
-<!--On Modality Bias in the TVQA Dataset-->
-  <div id="bib_tvqa" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-pink"> 
-        <span onclick="document.getElementById('bib_tvqa').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>BibTex</h2>
-      </header>
-      <div class="w3-container w3-black">
-          <p>@inproceedings{mbintvqa, <br>title={On Modality Bias in the TVQA Dataset}, <br>author={Winterbottom, T. and Xiao, S. and McLean, A. and Al Moubayed, N.}, <br>booktitle={Proceedings of the British Machine Vision Conference ({BMVC})}, <br>year={2020}}</p>
-      </div>
-    </div>
-  </div>
-
-<!--Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models-->
-  <div id="bib_nli" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-pink"> 
-        <span onclick="document.getElementById('bib_nli').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>BibTex</h2>
-      </header>
-      <div class="w3-container w3-black">
-          <p>@article{Gajbhiye_2020,<br>
-          title={Bilinear Fusion of Commonsense Knowledge with Attention-Based NLI Models},<br>
-          ISBN={9783030616090},<br>
-          ISSN={1611-3349},<br>
-          url={http://dx.doi.org/10.1007/978-3-030-61609-0_50},<br>
-          DOI={10.1007/978-3-030-61609-0_50},<br>
-          journal={Lecture Notes in Computer Science},<br>
-          publisher={Springer International Publishing},<br>
-          author={Gajbhiye, Amit and Winterbottom, Thomas and Al Moubayed, Noura and Bradley, Steven},<br>
-          year={2020},<br>
-          pages={633–646}}
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div id="code_nli" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-pink"> 
-        <span onclick="document.getElementById('code_nli').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>BibTex</h2>
-      </header>
-      <div class="w3-container w3-black">
-        <p>
-        Ask the <a href="https://scholar.google.co.uk/citations?user=yEzfwXcAAAAJ">very kind first author</a> for the code 
-        </p>
-      </div>
-    </div>
-  </div>
+                    
 
 
+    </section>
 
+    <!-- Personal Section with Tabbing -->
+    <section class="personal">
+        <h2>Personal</h2>
+        <p>I make things.</p>
+        <div class="tabs">
+            <button class="tab-link" onclick="openTab(event, 'diy')">DIY</button>
+        </div>
+
+
+        <!-- Container for the image gallery -->
+        <div class="container", id="diy">
+        
+          <!-- Full-width images with number text -->
+          <div class="mySlides">
+            <div class="numbertext">1 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/jewellery/necklace.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/placeholder.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/jewellery/ear_and_brace.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/periodic_tables/placeholder.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/periodic_tables/placeholder.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/jacket/leather_jacket.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">7 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/jacket/lining.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">8 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/server/server.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">9 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/scarf/scarf.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">10 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/desk/desk.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">11 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/leather_dying/dye.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">12 / 12</div>
+            <div class="parent-container">
+                <div class="image-padded-container">
+                  <img src="imgs/DIY/brownies/brownies.png" style="width:100%">
+                </div>
+            </div>
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+          <!-- Image text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/jewellery/necklace.png" style="width:100%" onclick="currentSlide(1)" alt="First jewellery I ever made, anodised Niobium for colour.">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/placeholder.png" style="width:100%" onclick="currentSlide(2)" alt="Improved necklace design present for Nina, she chose yellow.">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/jewellery/ear_and_brace.png" style="width:100%" onclick="currentSlide(3)" alt="Titanium jewellery that i bought, but recoloured myself.">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/periodic_tables/placeholder.png" style="width:100%" onclick="currentSlide(4)" alt="Made a plywood periodic table for my nephew, designed to screw in hooks so you can display element samples.">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/periodic_tables/placeholder.png" style="width:100%" onclick="currentSlide(5)" alt="One for Noura's family too">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/jacket/leather_jacket.png" style="width:100%" onclick="currentSlide(6)" alt="Made a hood for my leather jacket out of sherpa I dyed and an old shirt">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/jacket/lining.png" style="width:100%" onclick="currentSlide(7)" alt="Replace old uncomfortable lining with dyed sherpa sewn into the leather">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/server/server.png" style="width:100%" onclick="currentSlide(8)" alt="Made a home server, put my PC in it too">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/scarf/scarf.png" style="width:100%" onclick="currentSlide(9)" alt="Knitted neck warmer, first thing I've ever knitted">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/desk/desk.png" style="width:100%" onclick="currentSlide(10)" alt="Plywood top I made for all my stuff. Put it on an adjustable standing desk frame">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/leather_dying/dye.png" style="width:100%" onclick="currentSlide(11)" alt="Vinegaroon homemade black leather dye">
+                </div>
+            </div>
+            <div class="column">
+                <div class="thumb-image-padded-container">
+                    <img class="demo cursor" src="imgs/DIY/brownies/brownies.png" style="width:100%" onclick="currentSlide(12)" alt="Chocolate orange brownie recipe I've been iterating on, this one with caramel buttermilk glaze">
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Tom Winterbottom. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

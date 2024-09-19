@@ -1,0 +1,410 @@
+
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b; /* Dark theme background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+/* Parent container */
+.parent-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50vh; /* Full viewport height for demonstration */
+    background-color: #222; /* Background color for visibility */
+}
+
+
+.thumb-image-padded-container {
+    width: 80px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    background-color: black; /* Background color for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow if image is larger */
+    position: relative;
+}
+
+.thumb-image-padded-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Contain the image within the container */
+    background-color: black; /* Set background color for padding */
+}
+
+
+.image-padded-container {
+    width: 800px; /* Set the desired width */
+    height: 500px; /* Set the desired height */
+    background-color: black; /* Background color for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow if image is larger */
+    position: relative;
+}
+
+.image-padded-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Contain the image within the container */
+    background-color: black; /* Set background color for padding */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Me Section */
+.about-me {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Common Styles for Columns */
+.about-column {
+    float: left;              /* Float columns to the left */
+    width: 50%;               /* Each column takes up 50% width */
+    padding: 20px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Researcher Column Styles */
+.researcher {
+    background-color: #162229;
+    color: #6fe7dd;
+}
+
+/* Lifestyle Column Styles */
+.lifestyle {
+    background-color: #292121;
+    color: #ff007f;
+}
+
+/* Heading Styles */
+.about-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Underline style */
+    padding-bottom: 5px;
+}
+
+/* Paragraph Styles */
+.about-column p {
+    font-size: 1em;
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Clear Floats */
+.about-me:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+/* Header and Profile */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    border-bottom: 1px solid #333;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2.5em;
+}
+
+/* Tab styles */
+.tabs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-link:hover {
+    background-color: #555;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+/* Publications Section - Teal-Blue Theme */
+.publications {
+    padding: 40px;
+    background-color: #162229;
+    color: #6fe7dd;
+}
+
+.publications h2 {
+    color: #6fe7dd;
+    border-bottom: 2px solid #6fe7dd;
+}
+
+/* Publication Container */
+.publication {
+    background-color: #22343c;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.publication h3 {
+    margin-top: 0;
+}
+
+.publication p {
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #6fe7dd;
+    color: #162229;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #4fbfc0;
+}
+
+/* BibTeX Style */
+.bibtex {
+    background-color: #1b2b32;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    display: none;
+}
+
+.bibtex pre {
+    white-space: pre-wrap;
+    color: #fff;
+}
+
+/* Personal Section - Hot Pink Theme */
+.personal {
+    padding: 40px;
+    background-color: #292121;
+    color: #ff007f;
+}
+
+.personal h2 {
+    color: #ff007f;
+    border-bottom: 2px solid #ff007f;
+}
+
+.personal p {
+    color: #f5f5f5;
+    font-size: 1.2em;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    border-top: 1px solid #333;
+    color: #bbb;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+/* Social Links Section */
+.social-links {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.social-links h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
