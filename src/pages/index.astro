@@ -4,7 +4,7 @@ import Layout from "../components/Layout.astro";
 
 <Layout title="Your Name">
 
-<section class="py-16">
+<section class="py-20 space-y-20">
 
   <h1 class="text-4xl font-semibold mb-4">
     Your Name
@@ -18,6 +18,19 @@ import Layout from "../components/Layout.astro";
     Applied machine learning across physics-based modelling, medical imaging, and scientific datasets.
     Increasing focus on GPU performance, PyTorch internals, and system-level optimisation.
   </p>
+
+  <p class="text-gray-400 max-w-2xl mb-12">
+  <div class="h-px w-full bg-gradient-to-r from-cyan-500/20 via-transparent to-pink-500/20 my-12"></div>
+
+
+  <!-- IMAGE -->
+  <div class="w-40 h-40 md:w-48 md:h-48 shrink-0">
+    <img
+      src="/me.jpg"
+      alt="Profile photo"
+      class="w-full h-full object-cover rounded-xl border border-white/10"
+    />
+  </div>
 
   <!-- CAPABILITIES -->
   <div class="mb-14">
@@ -37,23 +50,23 @@ import Layout from "../components/Layout.astro";
   <div class="mb-14">
     <h2 class="text-lg font-semibold text-cyan-400 mb-6">Selected Work</h2>
 
-    <div class="space-y-6">
+    <div class="space-y-8">
 
-      <div class="border border-gray-800 rounded-xl p-5">
+      <div class="card">
         <h3 class="font-medium mb-2">GPU-accelerated reconstruction</h3>
         <p class="text-gray-400">
           Iterative reconstruction pipeline focused on GPU efficiency, memory behaviour, and compute optimisation.
         </p>
       </div>
 
-      <div class="border border-gray-800 rounded-xl p-5">
+      <div class="card">
         <h3 class="font-medium mb-2">Skin cancer classification</h3>
         <p class="text-gray-400">
           Medical imaging system published in Nature Medicine. 
         </p>
       </div>
 
-      <div class="border border-gray-800 rounded-xl p-5">
+      <div class="card">
         <h3 class="font-medium mb-2">Archaeological CNN systems</h3>
         <p class="text-gray-400">
           Applied deep learning to scientific imaging. Published in Nature Scientific Reports
