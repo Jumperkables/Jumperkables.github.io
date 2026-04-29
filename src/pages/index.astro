@@ -1,11 +1,81 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../components/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Your Name">
+
+<section class="py-16">
+
+  <h1 class="text-4xl font-semibold mb-4">
+    Your Name
+  </h1>
+
+  <p class="text-xl text-gray-300 mb-6">
+    ML Engineer focused on performance, numerical stability, and efficient model training.
+  </p>
+
+  <p class="text-gray-400 max-w-2xl mb-12">
+    Applied machine learning across physics-based modelling, medical imaging, and scientific datasets.
+    Increasing focus on GPU performance, PyTorch internals, and system-level optimisation.
+  </p>
+
+  <!-- CAPABILITIES -->
+  <div class="mb-14">
+    <h2 class="text-lg font-semibold text-cyan-400 mb-4">Capabilities</h2>
+
+    <div class="grid md:grid-cols-2 gap-3 text-gray-400">
+      <div>PyTorch training systems & debugging</div>
+      <div>Performance profiling & bottleneck analysis</div>
+      <div>Training stability (mixed precision, NaNs)</div>
+      <div>Applied ML in scientific domains</div>
+      <div>Memory-efficient model design</div>
+      <div>CUDA & low-level optimisation (active development)</div>
+    </div>
+  </div>
+
+  <!-- FEATURED WORK -->
+  <div class="mb-14">
+    <h2 class="text-lg font-semibold text-cyan-400 mb-6">Selected Work</h2>
+
+    <div class="space-y-6">
+
+      <div class="border border-gray-800 rounded-xl p-5">
+        <h3 class="font-medium mb-2">GPU-accelerated reconstruction</h3>
+        <p class="text-gray-400">
+          Iterative reconstruction pipeline focused on GPU efficiency, memory behaviour, and compute optimisation.
+        </p>
+      </div>
+
+      <div class="border border-gray-800 rounded-xl p-5">
+        <h3 class="font-medium mb-2">Skin cancer classification</h3>
+        <p class="text-gray-400">
+          Medical imaging system published in Nature Medicine. 
+        </p>
+      </div>
+
+      <div class="border border-gray-800 rounded-xl p-5">
+        <h3 class="font-medium mb-2">Archaeological CNN systems</h3>
+        <p class="text-gray-400">
+          Applied deep learning to scientific imaging. Published in Nature Scientific Reports
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="mb-14">
+    <h2 class="text-lg font-semibold text-cyan-400 mb-4">Notes</h2>
+    <p class="text-gray-400">
+      Writing on PyTorch performance, CUDA learning, and training stability.
+    </p>
+  </div>
+
+  <!-- SOFT PERSONAL SIGNAL -->
+  <p class="text-sm text-gray-500">
+    Jewellery design and fabrication in spare time.
+  </p>
+
+</section>
+
 </Layout>
