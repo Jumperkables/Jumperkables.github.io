@@ -7,23 +7,19 @@ const { title } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+    </head>
 
-  <body>
-    <div class="min-h-screen bg-[#0b0f14] text-[#e6edf3]">
-
-      <Nav />
-
-      <main class="max-w-4xl mx-auto px-6 py-12">
-        <slot />
-      </main>
-
-      <Footer />
-
-    </div>
-  </body>
+    <body>
+        <div class="min-h-screen bg-[#0b0f14] text-[#e6edf3]">
+            <Nav />
+                <main class="max-w-4xl mx-auto px-6 py-12">
+                    <slot />
+                </main>
+            <Footer />
+        </div>
+    </body>
 </html>

@@ -3,35 +3,71 @@ import Layout from "../components/Layout.astro";
 ---
 
 <Layout title="Jewellery">
-
-<h1 class="text-2xl font-semibold mb-6 text-pink-400">Jewellery</h1>
-
-<div class="mt-10 p-5 rounded-xl border border-white/10 bg-[#0d1117]">
-  <p class="text-pink-400 text-sm mb-1">Instagram</p>
-  <p class="text-gray-400 text-sm mb-3">
-    Jewellery studies, materials, and fabrication work.
-  </p>
-
-  <a
-    href="https://instagram.com/jumperkables_jewellery"
-    target="_blank"
-    class="text-cyan-400 hover:text-pink-400 transition"
-  >
-    instagram.com/jumperkables_jewellery ↗
-  </a>
-</div>
-
-<p class="text-gray-400 mb-6">
-  Handmade work exploring material, form, and precision.
-</p>
-
-<div class="grid grid-cols-2 gap-4">
-  <img src="/images/j1.jpg" class="rounded-lg" />
-  <img src="/images/j2.jpg" class="rounded-lg" />
-</div>
-
-<p class="text-sm text-gray-500 mt-6">
-  More on 
-</p>
-
+    <h1 class="text-2xl font-semibold mb-6 text-pink-400">Jewellery</h1>
+    <p class="text-gray-400 mb-6">
+        I cut, colour, shape, and make my own niobium and bismuth jewellery.
+    </p>
+    <p class="text-sm text-gray-500 mt-6">
+        <a
+            href="https://instagram.com/jumperkables_jewellery"
+            target="_blank"
+            class="text-cyan-400 hover:text-pink-400 transition"
+        >
+            instagram.com/jumperkables_jewellery ↗
+        </a>
+    </p>
 </Layout>
+
+
+<section class="max-w-xl mx-auto px-6 py-12 text-center">
+    <!-- LEFT -->
+    <button id="prev"
+        class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 px-3 py-2">
+        &lt
+    </button>
+    <!-- RIGHT -->
+    <button id="next"
+        class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 px-3 py-2">
+        &gt
+    </button>
+
+    <div class="relative">
+        <!-- IMAGE -->
+        <img id="carousel-image"
+            src="/imgs/jewellery/01.png"
+            height="300"
+            class="img-frame w-full h-96 object-cover"
+        />
+    </div>
+</section>
+
+
+<script is:inline>
+    const images = [
+        "/imgs/jewellery/01.png",
+        "/imgs/jewellery/02.png",
+        "/imgs/jewellery/03.png",
+        "/imgs/jewellery/04.png",
+        "/imgs/jewellery/05.png",
+    ];
+
+    let index = 0;
+
+    const img = document.getElementById("carousel-image");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    function update() {
+        img.src = images[index];
+    }
+
+    prev.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        update();
+    });
+
+    next.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        update();
+    });
+</script>

@@ -2,93 +2,72 @@
 import Layout from "../components/Layout.astro";
 ---
 
-<Layout title="Your Name">
+<Layout title="Dr. Thomas Winterbottom">
 
-<section class="py-20 space-y-20">
-
-  <h1 class="text-4xl font-semibold mb-4">
-    Your Name
-  </h1>
-
-  <p class="text-xl text-gray-300 mb-6">
-    ML Engineer focused on performance, numerical stability, and efficient model training.
-  </p>
-
-  <p class="text-gray-400 max-w-2xl mb-12">
-    Applied machine learning across physics-based modelling, medical imaging, and scientific datasets.
-    Increasing focus on GPU performance, PyTorch internals, and system-level optimisation.
-  </p>
-
-  <p class="text-gray-400 max-w-2xl mb-12">
-  <div class="h-px w-full bg-gradient-to-r from-cyan-500/20 via-transparent to-pink-500/20 my-12"></div>
-
-
-  <!-- IMAGE -->
-  <div class="w-40 h-40 md:w-48 md:h-48 shrink-0">
-    <img
-      src="/me.jpg"
-      alt="Profile photo"
-      class="w-full h-full object-cover rounded-xl border border-white/10"
-    />
-  </div>
-
-  <!-- CAPABILITIES -->
-  <div class="mb-14">
-    <h2 class="text-lg font-semibold text-cyan-400 mb-4">Capabilities</h2>
-
-    <div class="grid md:grid-cols-2 gap-3 text-gray-400">
-      <div>PyTorch training systems & debugging</div>
-      <div>Performance profiling & bottleneck analysis</div>
-      <div>Training stability (mixed precision, NaNs)</div>
-      <div>Applied ML in scientific domains</div>
-      <div>Memory-efficient model design</div>
-      <div>CUDA & low-level optimisation (active development)</div>
+<!-- HERO -->
+<section class="py-20 flex flex-col md:flex-row items-center gap-12">
+    <!-- TEXT -->
+    <div class="flex-1 space-y-6">
+        <h1 class="text-5xl font-semibold">Dr. Thomas Winterbottom</h1>
+        <p class="text-xl text-gray-300 mb-6">
+            ML Engineer focused on performance, numerical stability, and efficient model training.
+        </p>
+        <p class="text-gray-400 max-w-2xl mb-12">
+            Applied machine learning across physics-based modelling, medical imaging, and scientific datasets.
+            Increasing focus on GPU performance, PyTorch internals, and system-level optimisation.
+        </p>
+        <h2>Capabilities</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm muted">
+        <div>PyTorch training systems & debugging</div>
+        <div>Performance profiling & bottleneck analysis</div>
+        <div>Training stability (mixed precision, NaNs)</div>
+        <div>Memory-efficient model design</div>
+        <div>Applied ML in constrained environments</div>
+        <div>CUDA & low-level optimisation (active development)</div>
     </div>
-  </div>
-
-  <!-- FEATURED WORK -->
-  <div class="mb-14">
-    <h2 class="text-lg font-semibold text-cyan-400 mb-6">Selected Work</h2>
-
-    <div class="space-y-8">
-
-      <div class="card">
-        <h3 class="font-medium mb-2">GPU-accelerated reconstruction</h3>
-        <p class="text-gray-400">
-          Iterative reconstruction pipeline focused on GPU efficiency, memory behaviour, and compute optimisation.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="font-medium mb-2">Skin cancer classification</h3>
-        <p class="text-gray-400">
-          Medical imaging system published in Nature Medicine. 
-        </p>
-      </div>
-
-      <div class="card">
-        <h3 class="font-medium mb-2">Archaeological CNN systems</h3>
-        <p class="text-gray-400">
-          Applied deep learning to scientific imaging. Published in Nature Scientific Reports
-        </p>
-      </div>
-
+    <!-- IMAGE -->
+    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 ml-auto">
+        <img
+            src="/imgs/me.jpg"
+            height="300"
+            class="img-frame w-full h-96 object-cover"
+        />
     </div>
-  </div>
+</section>
 
-  <!-- NOTES -->
-  <div class="mb-14">
-    <h2 class="text-lg font-semibold text-cyan-400 mb-4">Notes</h2>
-    <p class="text-gray-400">
-      Writing on PyTorch performance, CUDA learning, and training stability.
-    </p>
-  </div>
 
-  <!-- SOFT PERSONAL SIGNAL -->
-  <p class="text-sm text-gray-500">
-    Jewellery design and fabrication in spare time.
-  </p>
+<!-- SELECTED WORK -->
+<section class="py-16 space-y-8">
 
+    <h2>Selected Work</h2>
+    <div class="space-y-6">
+        <div class="card">
+            <h3 class="font-medium hover:text-cyan-400 transition">
+                GPU-accelerated reconstruction
+            </h3>
+            <p class="muted mt-2">
+                Iterative reconstruction pipeline focused on GPU efficiency, memory behaviour, and compute optimisation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="font-medium hover:text-cyan-400 transition">
+                Skin cancer classification
+            </h3>
+            <p class="muted mt-2">
+                Medical imaging system developed under real-world constraints and deployed research conditions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="font-medium hover:text-cyan-400 transition">
+                Archaeological CNN systems
+            </h3>
+            <p class="muted mt-2">
+                Applied deep learning to domain-specific imaging with publication output.
+            </p>
+        </div>
+    </div>
 </section>
 
 </Layout>
