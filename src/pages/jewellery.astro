@@ -11,63 +11,91 @@ import Layout from "../components/Layout.astro";
         <a
             href="https://instagram.com/jumperkables_jewellery"
             target="_blank"
-            class="text-cyan-400 hover:text-pink-400 transition"
+            class="nav-link"
         >
             instagram.com/jumperkables_jewellery ↗
         </a>
     </p>
-</Layout>
 
+    <section class="max-w-xl mx-auto px-6 py-12">
 
-<section class="max-w-xl mx-auto px-6 py-12 text-center">
+  <div class="relative group">
+
     <!-- LEFT -->
     <button id="prev"
-        class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 px-3 py-2">
-        &lt
+      class="absolute left-3 top-1/4 -translate-y-1
+             bg-black/60 hover:bg-black/80
+             border border-white/10
+             px-3 py-2 rounded-md
+             text-white text-lg
+             opacity-0 group-hover:opacity-100
+             transition">
+      &lt
     </button>
     <!-- RIGHT -->
     <button id="next"
-        class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 px-3 py-2">
-        &gt
+      class="absolute left-3 top-3/4 -translate-y-1
+             bg-black/60 hover:bg-black/80
+             border border-white/10
+             px-3 py-2 rounded-md
+             text-white text-lg
+             opacity-0 group-hover:opacity-100
+             transition">
+      &gt
     </button>
 
-    <div class="relative">
-        <!-- IMAGE -->
-        <img id="carousel-image"
-            src="/imgs/jewellery/01.png"
-            height="300"
-            class="img-frame w-full h-96 object-cover"
-        />
-    </div>
+    <!-- IMAGE -->
+    <img
+      id="carousel-image"
+      src="/imgs/jewellery/01.png"
+      height="300"
+      class="object-cover"
+    />
+
+  </div>
+
+  <!-- OPTIONAL CAPTION -->
+  <p id="carousel-caption" class="mt-4 text-sm text-gray-400 text-center">
+    Bismuth base. Copper wire tree coated with additional crystals. Coloured hematite beads.
+  </p>
+
 </section>
 
 
+
+</Layout>
+
+
+
 <script is:inline>
-    const images = [
-        "/imgs/jewellery/01.png",
-        "/imgs/jewellery/02.png",
-        "/imgs/jewellery/03.png",
-        "/imgs/jewellery/04.png",
-        "/imgs/jewellery/05.png",
-    ];
+  const images = [
+    { src: "/imgs/jewellery/01.png", caption: "Bismuth base. Copper wire tree coated with additional crystals. Coloured hematite beads." },
+    { src: "/imgs/jewellery/02.png", caption: "Niobium inverted round chain." },
+    { src: "/imgs/jewellery/03.png", caption: "Niobium box chain under construction." },
+    { src: "/imgs/jewellery/04.png", caption: "Copper tree before additional copper crystal plating." },
+    { src: "/imgs/jewellery/05.png", caption: "Misc coloured niobium pieces." },
+  ];
 
-    let index = 0;
+  let index = 0;
 
-    const img = document.getElementById("carousel-image");
-    const prev = document.getElementById("prev");
-    const next = document.getElementById("next");
+  const img = document.getElementById("carousel-image");
+  const caption = document.getElementById("carousel-caption");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
 
-    function update() {
-        img.src = images[index];
-    }
+  function update() {
+    if (!img) return;
+    img.src = images[index].src;
+    if (caption) caption.textContent = images[index].caption;
+  }
 
-    prev.addEventListener("click", () => {
-        index = (index - 1 + images.length) % images.length;
-        update();
-    });
+  prev?.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    update();
+  });
 
-    next.addEventListener("click", () => {
-        index = (index + 1) % images.length;
-        update();
-    });
+  next?.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    update();
+  });
 </script>

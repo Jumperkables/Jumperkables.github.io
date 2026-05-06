@@ -4,70 +4,217 @@ import Layout from "../components/Layout.astro";
 
 <Layout title="Dr. Thomas Winterbottom">
 
+
+
 <!-- HERO -->
-<section class="py-20 flex flex-col md:flex-row items-center gap-12">
-    <!-- TEXT -->
-    <div class="flex-1 space-y-6">
-        <h1 class="text-5xl font-semibold">Dr. Thomas Winterbottom</h1>
-        <p class="text-xl text-gray-300 mb-6">
-            ML Engineer focused on performance, numerical stability, and efficient model training.
-        </p>
-        <p class="text-gray-400 max-w-2xl mb-12">
-            Applied machine learning across physics-based modelling, medical imaging, and scientific datasets.
-            Increasing focus on GPU performance, PyTorch internals, and system-level optimisation.
-        </p>
-        <h2>Capabilities</h2>
-        <div class="grid md:grid-cols-2 gap-4 text-sm muted">
-        <div>PyTorch training systems & debugging</div>
-        <div>Performance profiling & bottleneck analysis</div>
-        <div>Training stability (mixed precision, NaNs)</div>
-        <div>Memory-efficient model design</div>
-        <div>Applied ML in constrained environments</div>
-        <div>CUDA & low-level optimisation (active development)</div>
+<section class="max-w-4xl mx-auto px-6 py-20">
+
+  <div class="flex items-start justify-between gap-12">
+
+    <!-- LEFT -->
+    <div class="w-1/2">
+
+      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">
+        Dr. Thomas Winterbottom
+      </h1>
+
+
+
+
+       <p class="text-lg text-gray-300 max-w-xl">
+         Machine learning engineer with a PhD in multimodal machine learning, 3 years industry experience, and a further 6+ years across research and applied ML systems.
+       </p>
+       <p class="text-lg text-gray-300 max-w-xl">
+         Currently working at Kromek, UK.
+       </p>
+       <p class="text-lg text-gray-300 max-w-xl">
+         Delivered ML systems for production in physics and healthcare domains. Emphasis on robustness, dataset quality, and deployment under real-world constraints.
+       </p>
+       <p class="text-lg text-gray-300 max-w-xl">
+         I think its important to maintain strong mathematical and computer science foundations. Interested in linear algebra, multivariable calculus, probability, statistics, and optimisation. Moving towards manifold learning =).
+       </p>
+       <p class="text-lg text-gray-300 max-w-xl">
+         Equally important to keep on top of comp sci fundamentals. Complexity, profiling, systems/server management.
+       </p>
+       <p class="text-lg text-gray-300 max-w-xl">
+         Recently moving into performance-aware ML engineering: CUDA, numerical stability, ExecuTorch.
+       </p>
     </div>
-    <!-- IMAGE -->
-    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 ml-auto">
-        <img
-            src="/imgs/me.jpg"
-            height="300"
-            class="img-frame w-full h-96 object-cover"
-        />
+
+    <!-- RIGHT (IMAGE) -->
+    <div class="flex-1 w-1/2">
+      <img
+        src="/imgs/me.jpg"
+        height="300"
+        class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full border border-white/10"
+      />
     </div>
+  </div>
+
+  <!-- CAPABILITIES -->
+  <div class="mt-16">
+
+    <h2 class="text-xl font-medium text-white mb-6">
+      Capabilities
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+      <div><b>Machine Learning:</b> PyTorch; Transformers; Bespoke model engineering; PINNs; Dataset analysis; Bias mitigation; OpenLLM; HuggingFace; Multimodal learning; Vision: CNNs, ViTs, & Yolo; NLP & LLMs</div><br>
+      <div><b>Systems & Performance:</b> C++; CUDA; PyTorch internals; Gradient inspection; Dataset degeneracies; Training pipelines; Numerical stability; Profiling; Optimisation; Quantisation; Edge devices: Executorch/MAKE/Cross compilation for ARM microprocessors</div><br>
+      <div><b>Data Engineering:</b> Large-scale dataset construction; Physics simulations: GEANT4/COMSOL; LLM-assisted data labelling; Neurolinguistic data; Geospatial data: GRIB/TIFF/OSM; Data scraping & alignment</div><br>
+      <div><b>Infrastructure:</b> Linux systems: Arch/Ubuntu/AWS; SLURM; AWS; Docker; Server management</div><br>
+      <div><b>Maths & Theory:</b> Gradients/differentiation/optimisation (VJP); Linear algebra; Probability; Statistics; Real analysis; Complex analysis; Multivariable calculus</div><br>
+    </div>
+
+  </div>
+
 </section>
 
 
 <!-- SELECTED WORK -->
-<section class="py-16 space-y-8">
+<section class="max-w-4xl mx-auto px-6 py-16 space-y-10">
 
-    <h2>Selected Work</h2>
-    <div class="space-y-6">
-        <div class="card">
-            <h3 class="font-medium hover:text-cyan-400 transition">
-                GPU-accelerated reconstruction
-            </h3>
-            <p class="muted mt-2">
-                Iterative reconstruction pipeline focused on GPU efficiency, memory behaviour, and compute optimisation.
-            </p>
-        </div>
+  <h2 class="text-xl font-medium text-white">
+    Selected Projects
+  </h2>
 
-        <div class="card">
-            <h3 class="font-medium hover:text-cyan-400 transition">
-                Skin cancer classification
-            </h3>
-            <p class="muted mt-2">
-                Medical imaging system developed under real-world constraints and deployed research conditions.
-            </p>
-        </div>
+  <div class="space-y-6">
 
-        <div class="card">
-            <h3 class="font-medium hover:text-cyan-400 transition">
-                Archaeological CNN systems
-            </h3>
-            <p class="muted mt-2">
-                Applied deep learning to domain-specific imaging with publication output.
-            </p>
-        </div>
+    <!-- 1 -->
+    <div class="card space-y-3">
+
+      <h3 class="font-medium text-white">
+        CUDA MLEM Compton Reconstruction
+      </h3>
+
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Implemented a CUDA-based Maximum Likelihood Expectation Maximisation (MLEM) reconstruction pipeline for radiation detection systems.
+      </p>
+
+      <ul class="text-sm text-gray-400 space-y-1 list-disc pl-5">
+        <li>Achieved ~2× speedup over existing multi-threaded Julia implementation</li>
+        <li>Optimised kernel execution via fusion and memory access pattern redesign</li>
+        <li>Performance guided by Nsight profiling and bottleneck analysis</li>
+        <li>Work conducted in proprietary context (Kromek); CUDA learning pre-work available below</li>
+      </ul>
+
+      <p class="text-sm text-gray-400">
+        CUDA learning pathway:
+        <a href="https://github.com/Jumperkables/cuda-benchmarking"
+           class="nav-link text-cyan-400 hover:text-pink-400 transition">
+          github.com/Jumperkables/cuda-benchmarking
+        </a>
+      </p>
+
     </div>
-</section>
 
+    <!-- 2 -->
+    <div class="card space-y-3">
+
+      <h3 class="font-medium text-white">
+        ARM Deployment of PyTorch Models (ExecuTorch)
+      </h3>
+
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Explored deployment of PyTorch models onto ARM-based microcontrollers (i.MX RT1064) using ExecuTorch.
+      </p>
+
+      <ul class="text-sm text-gray-400 space-y-1 list-disc pl-5">
+        <li>Managed cross-compilation toolchains and embedded build systems</li>
+        <li>Worked through low-level dependency and runtime constraints</li>
+        <li>Focused on inference feasibility in resource-constrained environments</li>
+      </ul>
+
+    </div>
+
+
+    <div class="card space-y-3">
+      <h3 class="font-medium text-white">
+        5MAP — 5 Modalities of Air Pollution Data
+      </h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Did a bit of data engineering for an air pollution project: global air quality, meteorological, and geospatial datasets across 14k+ monitoring sites.
+      </p>
+      <ul class="text-sm text-gray-400 space-y-1 list-disc pl-5">
+        <li>Engineered large-scale geospatial data pipelines combining satellite imagery, GRIB weather data, and OpenStreetMap features</li>
+        <li>Built scraping and processing infrastructure for global grid-based environmental datasets</li>
+        <li>Designed alignment and preprocessing strategies for heterogeneous multi-source environmental data</li>
+        <li>Achieved near-zero sparsity across modalities in a dataset significantly larger than comparable open-source benchmarks</li>
+      </ul>
+      <p class="text-sm text-gray-400">
+        Dataset:
+        <a href="https://github.com/Jumperkables/clean_air"
+           class="nav-link text-cyan-400 hover:text-pink-400 transition">
+          github.com/Jumperkables/clean_air
+        </a>
+      </p>
+
+    </div>
+
+
+    <!-- 3 -->
+    <div class="card space-y-3">
+
+      <h3 class="font-medium text-white">
+        Home ML Systems Infrastructure
+      </h3>
+
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Built and maintain a personal compute and data infrastructure environment for ML experimentation and deployment.
+      </p>
+
+      <ul class="text-sm text-gray-400 space-y-1 list-disc pl-5">
+        <li>18U server rack with compute, NAS, VPN, and routing stack</li>
+        <li>Multi-GPU setup for VRAM-heavy experimentation and mixed precision practice</li>
+        <li>Self-hosted storage with RAIDZ2-backed redundancy</li>
+        <li>Fine-tuned local inference models including text-to-speech systems (voices include Victor Saltzpyre and Gul’dan)</li>
+      </ul>
+
+      <p class="text-sm text-gray-400">
+        Repository:
+        <a href="https://github.com/Jumperkables/sigmarvis"
+           class="nav-link text-cyan-400 hover:text-pink-400 transition">
+          github.com/Jumperkables/sigmarvis
+        </a>
+      </p>
+
+    </div>
+
+    <!-- 4 -->
+    <div class="card space-y-3">
+
+      <h3 class="font-medium text-white">
+        Fuzzy Label Representations via Neurolinguistic Word Norms
+      </h3>
+
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Investigated replacing one-hot encodings with similarity-based fuzzy label representations derived from neurolinguistic word norms.
+      </p>
+
+      <ul class="text-sm text-gray-400 space-y-1 list-disc pl-5">
+        <li>Applied to VQA classification settings within thesis work</li>
+        <li>Observed negative results, highlighting structural limitations of the approach</li>
+        <li>I'm planning in extending concept to softmax and LLM integration via CUDA kernels</li>
+      </ul>
+
+      <p class="text-sm text-gray-400">
+        Repository:
+        <a href="https://github.com/Jumperkables/llm_wordnorms"
+           class="nav-link text-cyan-400 hover:text-pink-400 transition">
+          github.com/Jumperkables/llm_wordnorms
+        </a>
+      </p>
+      <p class="text-sm text-gray-400">
+        LLM Repository:
+        <a href="https://github.com/Jumperkables/llm_wordnorms"
+           class="nav-link text-cyan-400 hover:text-pink-400 transition">
+          github.com/Jumperkables/llm_wordnorms
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 </Layout>
